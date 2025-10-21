@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js " ></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
+script.js
+window.addEventListener("DOMContentLoaded",function() {
+
+window.addEventListener("DOMContentLoaded", function() {
+ 
+    let scene = document.querySelector("a-scene");
+
+  let dode = document.createElement("a-dodecahedron");
+
+
+  dode.setAttribute("position", "0 1.5 -3"); // (x, y, z)
+  dode.setAttribute("radius", "1.2");
+  dode.setAttribute("color", "#FF5733"); // orange-red
+
+  scene.appendChild(dode);
+});
