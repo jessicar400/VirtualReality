@@ -1,4 +1,4 @@
-// Create a House class that can be used to add a house to our virtual world.
+// Create a House class that can be used to add a house to our virtual world..
 class House {
     constructor(x, z) {
         this.house = document.createElement("a-entity");
