@@ -58,3 +58,23 @@ function loop() {
   loop();
 }
 );
+
+let rocket = [];
+let rocketEl = [];
+for (let i = -5; i < 5; i++) {
+  for (let j = -5; j < 5; j++) {
+    let y = rnd(-10, -1);
+    rocket.push(new Rocket(i, y, j));
+  }
+}
+
+function loop() {
+  window.requestAnimationFrame(loop);
+  for (let i = 0; i < rocket.length; i++) {
+    rocket[i].launch();
+  }
+}
+
+loop();
+
+
