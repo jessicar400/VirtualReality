@@ -18,8 +18,7 @@ window.addEventListener("DOMContentLoaded",function() {
     snowmen.push(snowman);
   }
 
-  //Challenge 1: Create an array to store 20 clouds in random positions
-    let cloud = new Cloud(-5,10,-1);
+  //Challenge 1: Create an array to store 20 clouds in random positions. Create a lot of clouds at random high locations and make them fly.
     let clouds = [ ];
     for(let i = 0; i < 20; i++){
         let x = rnd(-20,20);
@@ -28,8 +27,10 @@ window.addEventListener("DOMContentLoaded",function() {
         let cloud = new Cloud(x,y,z);
         clouds.push(cloud);
     }
+  let cloud = new Cloud(0,10,0);
 
-  //Challenge 3: Create an array to store 100 snowflakes in random positions
+
+  //Challenge 3: Create an array to store 100 snowflakes in random positions. Create a lot of snowflakes at random high locations and make them fall.
   let snowflakes = [ ];
     for(let i = 0; i < 100; i++){
         let x = rnd(-20,20);
@@ -57,6 +58,9 @@ function loop(){
     for(let snowflake of snowflakes){
         snowflake.fall();
     }
+
   
   window.requestAnimationFrame( loop );
 }
+
+

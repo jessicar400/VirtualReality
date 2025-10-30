@@ -17,9 +17,14 @@ class Cloud{
     this.obj.setAttribute("position",{x:x, y:y, z:z});
     scene.append( this.obj )
   }
+ 
   fly(){
     this.x += this.dx
     this.obj.setAttribute("position",{x:this.x, y:this.y, z:this.z});
+    if(this.x > 20){
+      this.x = -20;
+      this.obj.setAttribute("position",{x:this.x, y:this.y, z:this.z} )
+    }
   }
 }
 
