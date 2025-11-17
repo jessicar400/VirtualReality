@@ -6,6 +6,9 @@ class Block{
     
     this.obj = document.createElement("a-box");
     this.obj.setAttribute("color","cyan");
+    this.obj.setAttribute("depth",1);
+    this.obj.setAttribute("width",1);
+    this.obj.setAttribute("height",1);
     this.obj.setAttribute("position",{x:x,y:y,z:z});
     scene.append(this.obj);
 
