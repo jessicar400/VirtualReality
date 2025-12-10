@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="script.js"></script>
+    <title>VR Practical 3.3 - Survival Game</title>
+  </head>
+  <body>
+    <a-scene>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="40" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+      <a-camera position="0 1.6 0"></a-camera>
+     <!--In this practical you will create a survival game.  The goal of the game is to destroy all the “enemies” before time runs out.  You will have to replenish your ammo by collecting “items” throughout the world.   Follow the challenges below to guide you in the development of the core component of the game.  Review the code template provided.  The logic for “shooting” is included as well as the recursive loops for animation and countdown timer.-->
+      <a-entity id="player" position="0 1.6 0">
+          <a-camera></a-camera>
+          <a-entity id="gun" position="0.2 -0.2 -0.5" rotation="0 0 0" geometry="primitive: box; height: 0.1; width: 0.5; depth: 0.1" material="color: black"></a-entity>
+        </a-entity>
+        <!-- Decide on an “enemy”. Populate the world with your enemies.-->
+        <a-box class="enemy" position="2 0.5 -5" color="red" depth="0.5" height="1" width="1"></a-box>
+        <a-box class="enemy" position="-3 0.5 -7" color="red" depth="0.5" height="1" width="1"></a-box>
+
+        <!-- Decide on an “item” that will replenish your ammo.  Populate the world with your items.-->
+        <a-sphere class="item" position="1 0.5 -3" color="blue" radius="0.3"></a-sphere>
+        <a-sphere class="item" position="-2 0.5 -6" color="blue" radius="0.3"></a-sphere>
+
+        <!--Check if any of the enemies have been shot.  If an enemy is hit, make it “disappear” and increase kill count and decrease the ammo count. -->
+        <a-text id="ammoCount" value="Ammo: 10" position="-1 2 -2" color="black"></a-text>
+        <a-text id="killCount" value="Kills: 0" position="1 2 -2" color="black"></a-text>
+
+        <!--Modify the shooting algorithm to only allow the player to shoot if they have sufficient ammo.-->
+        <a-text id="timer" value="Time: 60" position="0 3 -2" color="black"></a-text>
+
+        <!--If all the enemies are killed before time runs out, display “You Win”. If time runs out before all the enemies are killed, display “You Lose”.  Though the logic for this challenge has not been explored in any lesson, it can be accomplished with a few simple decisions that check multiple decisions.-->
+        <a-text id="gameOver" value="" position="0 2.5 -2" color="black" visible="false"></a-text>
+
+        <!--Populate the world with objects in order to immerse the player into the experiences.-->
+        <a-box position="4 0.5 -10" color="brown" depth="1" height="1" width="1"></a-box>
+        <a-box position="-4 0.5 -10" color="brown" depth="1" height="1" width="1"></a-box>
+        <a-cylinder position="0 1 -8" color="green" radius="0.5" height="2"></a-cylinder>
+
+     
+
+
+
+
+
+
+      
+
+    
+       
+    </a-scene>
+  </body>
+</html>
